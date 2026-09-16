@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me - Riley Stroud</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Fill out the form:</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Video:</h2>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NK_jgNOmisc?si=4OWqUaOf6KAP9pc5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <p>Watch the video above and leave your feedback below.</p>
+        </section>
+
+        <section>
+
+            <h2>Feedback Form:</h2>
+
+            <form name="feedback" action="#" method="post">
+
+                <p>
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="anonymous" required>
+                </p>
+
+                <p>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname" placeholder="anonymous" required>
+                </p>
+
+                <p>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" name="mail" placeholder="name@domain.com">
+                </p>
+
+                <p>
+                    <strong>Would you recommend this website?</strong><br>
+
+                    <input type="radio" id="yes" name="recommend" value="Yes">
+
+                    <label for="yes">Yes</label>
+
+                    <input type="radio" id="no" name="recommend" value="No">
+
+                    <label for="no">No</label>
+                </p>
+
+                <p>
+                    <label for="favorite">Favorite Website:</label><br>
+
+                    <select id="favorite" name="favorite">
+
+                        <option>Google</option>
+                        <option>Facebook</option>
+                        <option>Twitter/X</option>
+                        <option>YouTube</option>
+                        <option>Time</option>
+
+                    </select>
+
+                </p>
+
+                <p>
+                    <label for="rating">Rate this website (1-10):</label><br>
+
+                   0 <input type="range" id="rating" name="rating" min="1" max="10"> 10 
+                </p>
+
+                <p>
+                    <label for="comment">Comments:</label><br>
+
+                    <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+                </p>
+
+                <!-- Extra HTML5 Features -->
+
+                <p>
+                    <label for="birthday">Birthday:</label><br>
+
+                    <input type="date" id="birthday" name="birthday">
+                </p>
+
+                <p> <label for="phonenumber">PhoneNumber:</label><br>
+					<input type="phonenumber" name="phonenumber" placeholder="(###)-###-####" pattern="\d{3}-\d{3}-\d{4}"> 
+				</p>
+
+                <p>
+                    <label for="website">Personal Website:</label><br>
+
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit">
+
+                    <input type="reset" value="Reset">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <address>
+            <p>Email:
+                <a href="mailto:Jrstroud@usca.edu">
+                    Jrstroud@usca.edu
+                </a>
+            </p>
+        </address>
+
+        <p>&copy; 2026 Riley Stroud</p>
+
+    </footer>
+
+</body>
+
+</html>
