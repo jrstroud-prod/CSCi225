@@ -1,0 +1,286 @@
+/* home.css - external style sheet for index.html (Assignment 3) */
+
+/* Web font (Google Fonts) - @import must come first */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&display=swap");
+
+/* ---------- Layout ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Dosis", Arial, sans-serif;
+  /* Background image on body: put a photo at img/background.jpg */
+  background-color: #d9d9d9;
+  background-image: url("../img/IMG2.jpg");
+  background-image transform: scale(0.5);
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Page title is kept for the document outline but hidden visually */
+header h1 {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Hero area: four corner sections, contact in the bottom centre */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 26% 1fr 26%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "intro . portfolio"
+    ". . ."
+    "assign contact schedule";
+  column-gap: 20px;
+  padding: 40px 6% 30px;
+  min-height: 85vh;
+}
+
+.introduction { grid-area: intro; }
+.portfolio    { grid-area: portfolio; }
+.assignments  { grid-area: assign; align-self: end; }
+.schedule     { grid-area: schedule; align-self: end; }
+
+section {
+  border-radius: 12px;
+}
+
+/* Blue bar above each heading */
+section h2 {
+  margin: 0;
+  padding: 20px 0 12px;
+  border-top: 8px solid #6fa8d6;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Content is hidden until the visitor hovers over (or tabs to) a section */
+.section-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 15px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  transition: max-height 0.6s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+section:hover .section-body,
+section:focus-within .section-body {
+  max-height: 1500px;
+  opacity: 1;
+  padding: 15px;
+}
+
+/* Intro image floats beside the text */
+.introduction img {
+  float: right;
+  margin: 0 0 10px 15px;
+  max-width: 45%;
+  height: auto;
+}
+
+/* Contact block in the bottom centre, with its own blue bar */
+address {
+  grid-area: contact;
+  align-self: end;
+  padding-top: 40px;
+  border-top: 8px solid #6fa8d6;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ---------- Font and color ---------- */
+/* Web font (Dosis) on all paragraphs; line height and alignment */
+p {
+  font-family: "Dosis", Arial, sans-serif;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Font color + weight on all lists */
+ul,
+ol {
+  color: #1b4f72;
+  font-weight: 600;
+}
+
+/* ---------- Text ---------- */
+/* Uppercase + letter spacing for headings */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Text shadow on headings */
+h1,
+h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Links ---------- */
+a {
+  text-decoration: none;
+  color: #0645ad;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: rgb(80, 153, 255);
+  text-decoration: none;
+}
+
+/* ---------- Lists ---------- */
+/* Navigation list on one line, orange bar across the top */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgb(80, 153, 255);
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #1b4f72;
+}
+
+/* Image as list-item marker (put bullet.png in img/) */
+main ul {
+  list-style-image: url("../img/bullet.png");
+  list-style-type: disc; /* fallback if image is missing */
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: rgb(80, 153, 255);
+  padding: 18px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* ---------- Borders ---------- */
+/* Rounded corners */
+img,
+table {
+  border-radius: 12px;
+}
+
+/* ---------- Selector practice ---------- */
+/* Special style for first letter of all paragraphs */
+p::first-letter {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #ff8000;
+}
+
+/* Box shadow for first paragraph in portfolio section */
+#portfolio li:first-child p {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+/* Even rows of a table */
+tr:nth-child(even) {
+  background-color: #d6eaf8;
+}
+
+/* ---------- Table (course schedule) ---------- */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #1b4f72;
+  empty-cells: show;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border: 1px solid #1b4f72;
+  padding: 6px 8px;
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  background-color: #6fa8d6;
+  color: #ffffff;
+}
+
+/* ---------- Transform, transition, animation ---------- */
+img {
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+/* Blue bars slide in when the page loads */
+@keyframes barGrow {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+section h2,
+address {
+  transform-origin: center top;
+  animation: barGrow 1s ease-out;
+}
+
+/* Headings nudge up slightly on hover */
+section:hover h2 {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "intro"
+      "portfolio"
+      "assign"
+      "schedule"
+      "contact";
+    row-gap: 20px;
+  }
+}

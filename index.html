@@ -1,142 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> CSCI225 Homepage -James Stroud </title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        
+<head>
+    <title>CSCI225 Homepage - Riley Stroud</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
     <header>
-    <h1>CSCI225 Homepage of Riley Stroud</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.usca.edu" target="_blank">USCA Website</a></li>
+                <li><a href="#assignment"> Assignment Section</a></li>
+                <li><a href="ContactMe.html"> Contact Information</a></li>
+                <li><a href="https://www.google.com" target="_blank"> Google</a></li>
+                <li><a href="https://github.com" target="_blank"> GitHub Login</a></li>
+            </ul>
+        </nav>
+        <h1>CSCI225 Homepage of Riley Stroud</h1>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="https://www.usca.edu" target="_blank">USCA Home</a></li>
-            <li><a href="#assignment">Assignments</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-        <section>
-            <h2>Introduction</h2>
+    <main>
 
-            <p>
-                Hello! My name is Riley. I am currently a student at the University of South Carolina Aiken studying computer science.
-                I enjoy learning about programming, cybersecurity, and web development.
-                Outside of school, I enjoy playing video games and spending time with friends.
-                I hope to continue improving my programming skills throughout this course.
-            </p>
+        <section class="introduction" id="introduction">
+            <h2 tabindex="0">Introduction</h2>
+            <div class="section-body">
+                <img src="img/isle-of-palms-beach.jpg" alt="Beach" width="300">
 
-            <img src="img/isle-of-palms-beach.jpg" alt="Beach" width="300">
+                <p>
+                    Hello! My name is Riley. I am currently a student at the University of South Carolina Aiken studying computer science.
+                    I enjoy learning about programming, cybersecurity, and web development.
+                    Outside of school, I enjoy playing video games and spending time with friends.
+                    I hope to continue improving my programming skills throughout this course.
+                </p>
 
+                <p>
+                    I chose computer science because I like solving problems and seeing an idea turn into something that works.
+                    So far my coursework has covered Java programming, data structures, and the basics of networking and security,
+                    and I am now adding HTML and CSS to that list in CSCI225.
+                </p>
+
+                <p>
+                    My goal after graduation is to work in cybersecurity or software development.
+                    In my free time I like to explore new technology, work on small coding projects, and visit the beach,
+                    which is why the photo above is one of my favorites. This homepage will grow throughout the semester
+                    as I add new assignments and skills.
+                </p>
+
+                <!-- Editorial/Decoration Tags -->
+                <p><mark>This page is for CSCI225.</mark></p>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> is used to create webpages.</p>
+                <p><cite>Learning Web Programming</cite> is an exciting experience.</p>
+            </div>
         </section>
 
         <section class="portfolio" id="portfolio">
+            <h2 tabindex="0">Portfolio</h2>
+            <div class="section-body">
+                <ul>
+                    <li>
+                        <strong>Java Programs</strong>
+                        <p>Created Java applications including calculators, sorting algorithms, and recursion projects.</p>
+                    </li>
+                    <li>
+                        <strong>Cybersecurity Labs</strong>
+                        <p>Configured firewalls, performed vulnerability scans, and learned network security fundamentals.</p>
+                    </li>
+                    <li>
+                        <strong>HTML Website</strong>
+                        <p>Designed my first HTML webpage using semantic HTML5 elements.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <h2>Portfolio</h2>
-
-            <ul>
-                <li>
-                    <strong>Java Programs</strong>
-                    <p>Created Java applications including calculators, sorting algorithms, and recursion projects.</p>
-                </li>
-
-                <li>
-                    <strong>Cybersecurity Labs</strong>
-                    <p>Configured firewalls, performed vulnerability scans, and learned network security fundamentals.</p>
-                </li>
-
-                <li>
-                    <strong>HTML Website</strong>
-                    <p>Designed my first HTML webpage using semantic HTML5 elements.</p>
-                </li>
-            </ul>
-
+        <section class="assignments" id="assignment">
+            <h2 tabindex="0">Assignments</h2>
+            <div class="section-body">
+                <ol>
+                    <li><a href="doc/ASS1.pdf">Assignment 1</a></li>
+                    <li><a href="doc/Assignment2.pdf">Assignment 2</a></li>
+                    <li>Assignment 3</li>
+                    <li>Assignment 4</li>
+                    <li><a href="ContactMe.html">Fill out this form</a></li>
+                </ol>
+            </div>
         </section>
 
         <section class="schedule" id="schedule">
-
-            <h2>Schedule</h2>
-
-            <table border="1">
-
-                <tr>
-                    <th>Course</th>
-                    <th>Days</th>
-                    <th>Time</th>
-                </tr>
-
-                <tr>
-                    <td>CSCI225</td>
-                    <td>Monday & Wednesday</td>
-                    <td>12:00 PM - 1:15 PM</td>
-                </tr>
-
-                <tr>
-                    <td>Art History</td>
-                    <td>Tuesday & Thursday</td>
-                    <td>10:50 AM - 12:05 PM</td>
-                </tr>
-
-                <tr>
-                    <td>CSCI220</td>
-                    <td>Monday & Wednesday</td>
-                    <td>1:30 PM - 2:45 PM</td>
-                </tr>
-
-            </table>
-
+            <h2 tabindex="0">Schedule</h2>
+            <div class="section-body">
+                <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>Days</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>CSCI225</td>
+                        <td>Monday &amp; Wednesday</td>
+                        <td>12:00 PM - 1:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Art History</td>
+                        <td>Tuesday &amp; Thursday</td>
+                        <td>10:50 AM - 12:05 PM</td>
+                    </tr>
+                    <tr>
+                        <td>CSCI220</td>
+                        <td>Monday &amp; Wednesday</td>
+                        <td>1:30 PM - 2:45 PM</td>
+                    </tr>
+                </table>
+            </div>
         </section>
-</main>
 
-    
-
-    <aside id="assignment">
-
-        <h2>Assignments</h2>
-
-        <ol>
-            <li><a href="doc/ASS1.pdf">Assignment 1</a></li>
-            <li><a href="doc/Assignment2.pdf">Assignment 2</a></li>
-            <li>Assignment 3</li>
-            <li>Assignment 4</li>
-            <li><a href="ContactMe.html">Fill out this form </a></li>
-        </ol>
-
-    </aside>
-
-    <footer>
-
-        <address>
-
-            <p><strong>Contact Information</strong></p>
-
-            <p>
-                Email:
-                <a href="mailto:Jrstroud@usca.edu">Jrstroud@usca.edu</a>
-            </p>
-
+        <address id="contact">
+            <a href="mailto:Jrstroud@usca.edu">Jrstroud@usca.edu</a>
         </address>
 
-        <p>&copy; 2026 Riley. All Rights Reserved.</p>
+    </main>
 
+    <footer>
+        <p> By Riley Stroud, 2026. USCA  &reg;</p>
     </footer>
 
-    <!-- Editorial/Decoration Tags -->
-
-    <p><mark>This page is for CSCI225.</mark></p>
-
-    <p><abbr title="HyperText Markup Language">HTML</abbr> is used to create webpages.</p>
-
-    <p><cite>Learning Web Programming</cite> is an exciting experience.</p>
-    </body>
-
-
-
+</body>
 </html>
-
-
-        
